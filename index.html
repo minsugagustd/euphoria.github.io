@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="echarts.min.js"></script>
+<script src="world.js"></script>
+<script src="jquery-1.12.4.min.js"></script>
+<title>GLOBAL HOTSPOTS</title>
+    <style>
+        .option {
+            font-family: 黑体;
+            font-size: 18px;
+            line-height: 80px;
+            float: right
+        }
+
+        a:link {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:visited {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: gray;
+            text-decoration: none
+        }
+
+        a:active {
+            color: gray;
+            text-decoration: none
+        }
+
+        body {
+            background-color: aliceblue
+        }
+    </style>
+</head>
+<body>
+    <div style="width:auto;height:80px;background-color:lightsteelblue;">
+        <div style="width:500px;height:80px;float:left;color:#333333;line-height:80px;font-family:黑体;font-size:36px;
+            margin-left:20px">
+            全球政治热点区域可视化平台
+        </div>
+        <div class="option">
+            <a href="data.html" style="margin-right:60px;">数据</a>
+        </div>
+        <div class="option">
+            <a href="analyse.html" style="margin-right:30px;">分析</a>
+        </div>
+        <div class="option">
+            <a href="index.html" style="margin-right:30px;">主页</a>
+        </div>
+    </div>
+
+    <!--echarts-->
+    <div id="map" style="width: 1000px;height:600px;margin:0 auto"></div>
+    <script src="index.js"></script>
+
+    <div style="margin:20px auto 0 auto;width:830px;height:270px">
+        <div style="width:360px;height:150px;border:2px solid lightgray;float:left;margin-right:100px;background-color:white;
+            border-radius:10px;">
+            <div class="choice" style="width:150px;height:150px;float:left;">
+                <img src="分析.png" />
+            </div>
+            <div style="text-align:center;width:200px;height:150px;float:left;line-height:150px;color:#333333">
+                <a href="analyse.html">以若干个国家为例进行分析</a>
+            </div>
+        </div>
+
+        <div style="width:360px;height:150px;border:2px solid lightgray;float:left;background-color:white;border-radius:10px;">
+            <div class="choice" style="width:150px;height:150px;float:left">
+                <img src="数据.png" />
+            </div>
+            <div style="text-align:center;width:200px;height:150px;float:left;line-height:150px;color:#333333">
+                <a href="data.html">数据查询与平台简介</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

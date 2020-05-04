@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery-1.12.4.min.js"></script>
+<title>GLOBAL HOTSPOTS</title>
+    <style>
+        .option {
+            font-family: 黑体;
+            font-size: 18px;
+            line-height: 80px;
+            float: right
+        }
+
+        .choice {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        a:link {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:visited {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: gray;
+            text-decoration: none
+        }
+
+        a:active {
+            color: gray;
+            text-decoration: none
+        }
+
+        body {
+            background-color: aliceblue
+        }
+
+        .chaxun {
+            margin: 40px 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <div style="width:auto;height:80px;background-color:lightsteelblue;">
+        <div style="width:500px;height:80px;float:left;color:#333333;line-height:80px;font-family:黑体;font-size:36px;
+            margin-left:20px">
+            全球政治热点区域可视化平台
+        </div>
+        <div class="option">
+            <a href="data.html" style="margin-right:60px;">数据</a>
+        </div>
+        <div class="option">
+            <a href="analyse.html" style="margin-right:30px;">分析</a>
+        </div>
+        <div class="option">
+            <a href="index.html" style="margin-right:30px;">主页</a>
+        </div>
+    </div>
+
+    <div style="width:500px;height:400px;float:left;border:2px solid lightgray;background-color:white;margin-top:20px">
+        <div style="width:500px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
+            font-size:20px;text-align:center">事件数查询</div>
+        <div class="chaxun">
+			2015年：
+            <input id="TextBox2015" placeholder="请输入国家英文名" type="text" />
+			<button id="Button2015">确定</button>
+            <label id="Label2015"></label>
+            <script src="data.js"></script>
+        </div>
+        <div class="chaxun">
+            2016年：
+            <input id="TextBox2016" placeholder="请输入国家英文名" />
+            <button id="Button2016">确定</button>
+            <label id="Label2016"></label>
+            <script src="data.js"></script>
+        </div>
+        <div class="chaxun">
+            2017年：
+            <input id="TextBox2017" placeholder="请输入国家英文名" />
+            <button id="Button2017">确定</button>
+            <label id="Label2017"></label>
+            <script src="data.js"></script>
+        </div>
+        <div class="chaxun">
+            2018年：
+            <input id="TextBox2018" placeholder="请输入国家英文名" />
+            <button id="Button2018">确定</button>
+            <label id="Label2018"></label>
+            <script src="data.js"></script>
+        </div>
+        <div class="chaxun">
+            2019年：
+            <input id="TextBox2019" placeholder="请输入国家英文名" />
+            <button id="Button2019">确定</button>
+            <label id="Label2019"></label>
+            <script src="data.js"></script>
+        </div>
+    </div>
+
+    <div style="width:640px;height:600px;margin:20px 0 0 30px;float:left;">
+        <div style="width:640px;height:500px;border:2px solid lightgray;border-radius:10px;background-color:white;
+            font-size:17px;padding:20px;line-height:28px">
+            本平台所采用的的事件数据来源于
+            <a href="https://www.gdeltproject.org/">GDELT</a>。
+            <br /><br />
+            GDELT（Global Database of Events, Location, and Tone）是一个为研究全球政治冲突和不稳定而创建的大型政治科学数据库，同时也是一个实时的、开源的全球性社会新闻事件数据库。由于它记录了海量的媒体数据，因此，通过筛选并分析它提供的数据，可以得到许多有价值的信息。其中，GDELT的事件数据库（Event Database）记录了自1979年1月1日以来遍及全球的300多种类型的事件，每一条数据代表一个事件，包含2 个参与者、发生在二者之间的事件、参与者位置及事件发生位置等信息，根据事件信息对新闻进行聚合，并且每15分钟更新一次。由于事件库中采用冲突与调解事件观察（Conflictand Mediation Event Observations，CAMEO）对事件进行编码，因此，事件库中提取的事件均为政治合作或冲突的事件。
+            <br /><br />
+            尽管世界文明的进程不断向前发展，但是全球范围内仍然存在着诸多不稳定因素，因此，本平台通过对各个国家计算相对熵，再设置阈值的方式得到了各个国家的互补累计概率分布（CCDF），并将它作为衡量的标准，在数据分析的基础上对其进行了可视化，以达到区分全球政治热点区域的目的。
+        </div>
+    </div>
+</body>
+</html>

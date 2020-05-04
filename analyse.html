@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="echarts.min.js"></script>
+<title>GLOBAL HOTSPOTS</title>
+    <style>
+        .option {
+            font-family: 黑体;
+            font-size: 18px;
+            line-height: 80px;
+            float: right
+        }
+
+        .choice {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        a:link {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:visited {
+            color: #333333;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: gray;
+            text-decoration: none
+        }
+
+        a:active {
+            color: gray;
+            text-decoration: none
+        }
+
+        .contain {
+            width: 830px;
+            margin-top: 20px;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            background-color: white
+        }
+
+        .country {
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 290px;
+            font-size: 16px;
+        }
+
+        .tubiao {
+            margin-left: 10px;
+            width: 290px;
+            height: 20px;
+            line-height: 20px;
+            color: gray;
+            font-size: 14px
+        }
+
+        body {
+            background-color: aliceblue
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <div style="width:auto;height:80px;background-color:lightsteelblue;">
+        <div style="width:500px;height:80px;float:left;color:#333333;line-height:80px;font-family:黑体;font-size:36px;
+            margin-left:20px">
+            全球政治热点区域可视化平台
+        </div>
+        <div class="option">
+            <a href="data.html" style="margin-right:60px;">数据</a>
+        </div>
+        <div class="option">
+            <a href="analyse.html" style="margin-right:30px;">分析</a>
+        </div>
+        <div class="option">
+            <a href="index.html" style="margin-right:30px;">主页</a>
+        </div>
+    </div>
+    <!--定位栏-->
+    <div style="width:350px;height:580px;float:left;border:2px solid lightgray;background-color:white;margin-top:20px">
+        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
+            font-size:20px;text-align:center">相对稳定国家介绍</div>
+        <div class="country"><a href="#wdzg">中国</a></div>
+        <div class="tubiao">中国2015-2019事件总数变化</div>
+        <div class="country"><a href="#wdrb">日本</a></div>
+        <div class="tubiao">日本2015-2019事件总数</div>
+        <div class="country"><a href="#wdxxl">新西兰</a></div>
+        <div class="tubiao">新西兰2015-2019事件总数变化</div>
+
+        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
+            font-size:20px;text-align:center">政治热点区域国家介绍</div>
+        <div class="country"><a href="#rdym">也门</a></div>
+        <div class="tubiao">2015年也门各类型事件数</div>
+        <div class="country"><a href="#rdaejly">阿尔及利亚</a></div>
+        <div class="tubiao">阿尔及利亚2015-2019互补累计概率分布变化</div>
+        <div class="country"><a href="#rdml">马里</a></div>
+        <div class="tubiao">2019年马里各类型事件数</div>
+        <div class="country"><a href="#rdsml">索马里</a></div>
+        <div class="tubiao">2017年马里各类型事件数</div>
+
+        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
+            font-size:20px;text-align:center">总结</div>
+        <div class="country"><a href="#zj">分析与总结</a></div>
+    </div>
+    <!--文本栏-->
+    <div style="margin-left:30px;float:left;width:830px;">
+        <div class="contain" style="height:240px;">
+            <div id="wdzg" style="width:420px;height:200px;float:left;margin:30px 30px">
+                中华人民共和国（People's Republic of China），简称“中国”，成立于1949年10月1日，位于亚洲东部，太平洋西岸，是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家。陆地面积约960万平方千米，水域面积约470多万平方千米。截至2019年，中国大陆人口数量14.0005亿人，是一个以汉族为主体、56个民族共同组成的统一的多民族国家。
+            </div>
+            <div id="cnxian" style="width: 300px;height:250px;float:right;margin-right:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('cnxian'));
+                myChart.setOption(option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['2015', '2016', '2017', '2018', '2019']
+                    },
+                    yAxis: {
+                        type: 'value',
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    grid: {
+                        left: 70   //左边距，解决y轴显示不全
+                    },
+                    title: {
+                        text: '中国2015-2019事件总数变化',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 20
+                    },
+                    series: [{
+                        data: [8734302, 9697688, 8497561, 7890894, 6155053],
+                        type: 'line'
+                    }]
+                });
+            </script>
+        </div>
+        <div class="contain" style="height:240px;">
+            <div id="wdrb" style="width:420px;height:200px;float:left;margin:30px 30px">
+                日本国（Japan），简称“日本”，位于东亚，是一个太平洋西岸的岛国,领土由北海道、本州、四国、九州四个大岛及6800多个小岛组成，总面积37.8万平方公里。日本是君主立宪国，如同世界上多数君主立宪制度，天皇没有政治实权，但备受民众敬重，是世界上唯一一个宪法没有赋予君主任何权力的君主制国家。主体民族为大和族，通用日语，总人口约1.26亿。
+            </div>
+            <div id="jpxian" style="width: 300px;height:250px;float:right;margin-right:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('jpxian'));
+                myChart.setOption(option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['2015', '2016', '2017', '2018', '2019']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    grid: {
+                        left: 70   //左边距，解决y轴显示不全
+                    },
+                    title: {
+                        text: '日本2015-2019事件总数',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 20
+                    },
+                    series: [{
+                        data: [22207368, 23436974, 20475118, 19067663, 15200703],
+                        type: 'bar'
+                    }]
+                });
+            </script>
+        </div>
+        <div class="contain" style="height:240px;">
+            <div id="wdxxl" style="width:420px;height:200px;float:left;margin:30px 30px">
+                新西兰（New Zealand），又译纽西兰，是南太平洋的一个国家，政治体制实行君主立宪制混合英国式议会民主制，现为英联邦成员国之一，是一个高度发达的资本主义国家。新西兰位于太平洋西南部，领土由北岛、南岛及一些小岛组成，以库克海峡分隔。国土面积268021平方公里,截至2019年6月，人口数量492万。
+            </div>
+            <div id="nzxian" style="width: 300px;height:250px;float:right;margin-right:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('nzxian'));
+                myChart.setOption(option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['2015', '2016', '2017', '2018', '2019']
+                    },
+                    yAxis: {
+                        type: 'value',
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    grid: {
+                        left: 70   //左边距，解决y轴显示不全
+                    },
+                    title: {
+                        text: '新西兰2015-2019事件总数变化',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 20
+                    },
+                    series: [{
+                        data: [28545403, 30157592, 26974156, 25210272, 19883014],
+                        type: 'line'
+                    }]
+                });
+            </script>
+        </div>
+
+        <div class="contain" style="height:320px;">
+            <div id="rdym" style="width:420px;height:200px;float:right;margin:30px 30px">
+                也门共和国（Yemen Republic），简称“也门”，位于阿拉伯半岛西南端，与沙特、阿曼相邻，濒红海、亚丁湾和 阿拉伯海，国土面积527,970平方公里。也门拥有3000多年文字记载的历史，是阿拉伯世界古代文明摇篮之一，同时也是世界最不发达国家之一，粮食不能自给，约1/2依靠进口。1990年5月由阿拉伯也门共和国（北也门）和也门民主人民共和国（南也门）合并组成。截至2019年人口数量为2758万，主要宗教为伊斯兰教。
+                <br />
+                <br />
+                2015年3月，也门总统阿卜杜勒-拉布·曼苏尔·哈迪宣布，因其首都萨那被胡塞武装分子占领，亚丁为临时首都。
+            </div>
+            <div id="ymbing" style="width: 300px;height:300px;float:left;margin-left:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('ymbing'));
+                myChart.setOption(option = {
+                    title: {
+                        text: '2015年也门各类型事件数',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 30
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
+                    },
+                    series: [
+                        {
+                            name: '各类型事件数',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: [
+                                { value: 41982, name: '发表公开声明' },
+                                { value: 18857, name: '呼吁' },
+                                { value: 14896, name: '表明合作意向' },
+                                { value: 73205, name: '磋商' },
+                                { value: 22266, name: '进行外交合作' },
+                                { value: 6487, name: '进行实质性合作' },
+                                { value: 11096, name: '提供援助' },
+                                { value: 16320, name: '投降' },
+                                { value: 2754, name: '调查' },
+                                { value: 4009, name: '要求' },
+                                { value: 21303, name: '反对' },
+                                { value: 6302, name: '拒绝' },
+                                { value: 7625, name: '威胁' },
+                                { value: 4454, name: '抗议' },
+                                { value: 2358, name: '显示兵力态势' },
+                                { value: 8343, name: '减少联系' },
+                                { value: 8782, name: '强迫' },
+                                { value: 8783, name: '攻击' },
+                                { value: 66961, name: '战争' },
+                                { value: 165, name: '使用非常规性大规模暴力' }
+                            ],
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+        <div class="contain" style="height:290px;">
+            <div id="rdaejly" style="width:420px;height:200px;float:left;margin:30px 30px">
+                阿尔及利亚民主人民共和国（People's Democratic Republic of Algeria ），简称“阿尔及利亚”，是非洲北部马格里布的一个国家。阿尔及利亚国土面积2,381,741平方公里，居非洲各国、地中海各国和阿拉伯国家之冠，排全球第10位。阿尔及利亚经济规模在非洲居第四位，仅次于南非、尼日利亚和埃及。截至2017年人口数量为4220万。
+                <br />
+                <br />
+                2019年，前总统兼国防部长阿卜杜勒－阿齐兹·布特弗利卡因民众反对第五任期而卸任。阿卜杜勒-马吉德·特本当选总统并在首都阿尔及尔万国宫会议中心宣誓就职。
+            </div>
+            <div id="aejlyxian" style="width: 300px;height:250px;float:right;margin:30px 30px 0 0"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('aejlyxian'));
+                myChart.setOption(option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['2015', '2016', '2017', '2018', '2019']
+                    },
+                    yAxis: {
+                        type: 'value',
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    title: {
+                        text: '阿尔及利亚2015-2019互补累计概率分布变化',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 20
+                    },
+                    series: [{
+                        data: [0.15444015444015444, 0.10810810810810811, 0.11538461538461539, 0.10894941634241245, 0.6293436293436293],
+                        type: 'line'
+                    }]
+                });
+            </script>
+        </div>
+        <div class="contain" style="height:320px;">
+            <div id="rdml" style="width:420px;height:200px;float:left;margin:30px 30px">
+                马里共和国（République du Mali），简称“马里”，是西非的一个内陆国家，国土面积124万平方公里，是西非面积第二大的国家。据联合国《2010年人类发展报告》统计，马里在全球169个国家综合发展排名中列160位，是世界最不发达国家之一。农牧渔业占GDP的1/3，占就业人口的80%，是马里经济发展的主要潜力，此外，马里的工业基本空白。
+                <br />
+                <br />
+                2012年3月，马里发生军人骚乱，起因是不满抚恤政策，总统政权被终结。
+            </div>
+            <div id="mlbing" style="width: 300px;height:300px;float:right;margin-right:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('mlbing'));
+                myChart.setOption(option = {
+                    title: {
+                        text: '2019年马里各类型事件数',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 30
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
+                    },
+                    series: [
+                        {
+                            name: '各类型事件数',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: [
+                                { value: 3473, name: '发表公开声明' },
+                                { value: 1501, name: '呼吁' },
+                                { value: 1432, name: '表明合作意向' },
+                                { value: 6249, name: '磋商' },
+                                { value: 1808, name: '进行外交合作' },
+                                { value: 755, name: '进行实质性合作' },
+                                { value: 1128, name: '提供援助' },
+                                { value: 1106, name: '投降' },
+                                { value: 357, name: '调查' },
+                                { value: 274, name: '要求' },
+                                { value: 2149, name: '反对' },
+                                { value: 334, name: '拒绝' },
+                                { value: 372, name: '威胁' },
+                                { value: 269, name: '抗议' },
+                                { value: 324, name: '显示兵力态势' },
+                                { value: 212, name: '减少联系' },
+                                { value: 918, name: '强迫' },
+                                { value: 799, name: '攻击' },
+                                { value: 5694, name: '战争' },
+                                { value: 132, name: '使用非常规性大规模暴力' }
+                            ],
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+        <div class="contain" style="height:320px;">
+            <div id="rdsml" style="width:420px;height:200px;float:left;margin:30px 30px">
+                索马里联邦共和国（The Federal Republic of Somalia），简称“索马里”，位于非洲大陆最东部的索马里半岛，拥有非洲最长的海岸线，总面积637660平方公里。截至2018年，人口数量为1518万。索马里是世界最不发达国家之一，由于内战连绵不断，社会、教育体系已崩溃多年，因为是各国货轮出入苏伊士运河的必经海路，所以当地人自20世纪以来即以海盗为业。该国海盗每年勒索各国商船，金额难以估计。
+                <br />
+                <br />
+                2017年2月8日，穆罕默德·阿卜杜拉希·穆罕默德当选索马里总统，2月22日宣誓就职。
+            </div>
+            <div id="smlbing" style="width: 300px;height:300px;float:right;margin-right:30px"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('smlbing'));
+                myChart.setOption(option = {
+                    title: {
+                        text: '2017年马里各类型事件数',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 30
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
+                    },
+                    series: [
+                        {
+                            name: '各类型事件数',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: [
+                                { value: 24055, name: '发表公开声明' },
+                                { value: 10288, name: '呼吁' },
+                                { value: 8454, name: '表明合作意向' },
+                                { value: 46883, name: '磋商' },
+                                { value: 13389, name: '进行外交合作' },
+                                { value: 4653, name: '进行实质性合作' },
+                                { value: 8329, name: '提供援助' },
+                                { value: 8524, name: '投降' },
+                                { value: 2310, name: '调查' },
+                                { value: 2069, name: '要求' },
+                                { value: 11267, name: '反对' },
+                                { value: 3445, name: '拒绝' },
+                                { value: 3566, name: '威胁' },
+                                { value: 1131, name: '抗议' },
+                                { value: 1376, name: '显示兵力态势' },
+                                { value: 1455, name: '减少联系' },
+                                { value: 9660, name: '强迫' },
+                                { value: 6669, name: '攻击' },
+                                { value: 30973, name: '战争' },
+                                { value: 117, name: '使用非常规性大规模暴力' }
+                            ],
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+        <div id="zj" style="width:830px;height:270px;margin:20px 0;border:2px solid gray;border-radius:5px;
+            background-color:white">
+            <div style="width:100px;height:40px;margin:20px 0 10px 20px;font-size:30px;">总结</div>
+            <div style="width:790px;margin:0 20px;">
+                从中国、日本、新西兰这三个政治较为稳定国家2015年至2019年事件数量变化折线图可以看出，事件数量多的国家，政治热度不一定高，且三个国家政治事件数量波动也较为相似。
+                <br />也门是2015年的政治热点区域之一，该年3月，也门首都萨那被胡塞武装分子占领，将亚丁设为临时首都。而从2015年发生的政治事件中也可以看出磋商、战争、发表公开声明占了大多数。
+                <br />阿尔及利亚在2015-2018年政治状况都较为稳定，但在2019年它的政治热度却突然上升，成为了政治热点区域之一，而该年，阿尔及利亚曾三次连任的前总统因民众反对而卸任，新总统宣誓就职。
+                <br />从处于政治热点区域的国家来看，以上例举的几个国家的各个政治事件类型所占的比例都较为相似，且大都是最不发达国家。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
