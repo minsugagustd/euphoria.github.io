@@ -330,14 +330,14 @@ myChart.setOption(option = {
             title: {
                 text: '全球政治热点区域(2015)',
                 textStyle: {
-                    "fontSize": 16, "color": "#5E5E5E"
+                    "fontSize": 18, "color": "#5E5E5E"
                 },
-                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率',
+                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率\n*值越大则该国家政治热度越高',
                 subtextStyle: {
-                    "color": "#888888"
+                    "fontSize": 14,"color": "#888888"
                 },
-                left: 'center',
-                top: 25
+                left: 'left',
+                top: 20
             },
             series: [
                 {
@@ -385,14 +385,14 @@ myChart.setOption(option = {
             title: {
                 text: '全球政治热点区域(2016)',
                 textStyle: {
-                    "fontSize": 16, "color": "#5E5E5E"
+                    "fontSize": 18, "color": "#5E5E5E"
                 },
-                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率',
+                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率\n*值越大则该国家政治热度越高',
                 subtextStyle: {
-                    "color": "#888888"
+                    "fontSize": 14,"color": "#888888"
                 },
-                left: 'center',
-                top: 25
+                left: 'left',
+                top: 20
             },
             series: [
                 {
@@ -440,14 +440,14 @@ myChart.setOption(option = {
             title: {
                 text: '全球政治热点区域(2017)',
                 textStyle: {
-                    "fontSize": 16, "color": "#5E5E5E"
+                    "fontSize": 18, "color": "#5E5E5E"
                 },
-                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率',
+                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率\n*值越大则该国家政治热度越高',
                 subtextStyle: {
-                    "color": "#888888"
+                    "fontSize": 14,"color": "#888888"
                 },
-                left: 'center',
-                top: 25
+                left: 'left',
+                top: 20
             },
             series: [
                 {
@@ -495,14 +495,14 @@ myChart.setOption(option = {
             title: {
                 text: '全球政治热点区域(2018)',
                 textStyle: {
-                    "fontSize": 16, "color": "#5E5E5E"
+                    "fontSize": 18, "color": "#5E5E5E"
                 },
-                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率',
+                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率\n*值越大则该国家政治热度越高',
                 subtextStyle: {
-                    "color": "#888888"
+                    "fontSize": 14,"color": "#888888"
                 },
-                left: 'center',
-                top: 25
+                left: 'left',
+                top: 20
             },
             series: [
                 {
@@ -550,14 +550,14 @@ myChart.setOption(option = {
             title: {
                 text: '全球政治热点区域(2019)',
                 textStyle: {
-                    "fontSize": 16, "color": "#5E5E5E"
+                    "fontSize": 18, "color": "#5E5E5E"
                 },
-                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率',
+                subtext: '事件数据来自GDELT，其中CCDF值为相对熵大于阈值0.2的概率\n*值越大则该国家政治热度越高',
                 subtextStyle: {
-                    "color": "#888888"
+                    "fontSize": 14,"color": "#888888"
                 },
-                left: 'center',
-                top: 25
+                left: 'left',
+                top: 20
             },
             series: [
                 {

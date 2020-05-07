@@ -85,36 +85,34 @@
         </div>
     </div>
     <!--定位栏-->
-    <div style="width:350px;height:580px;float:left;border:2px solid lightgray;background-color:white;margin-top:20px">
-        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
-            font-size:20px;text-align:center">相对稳定国家介绍</div>
+    <div style="width:350px;height:525px;float:left;border:2px solid lightgray;background-color:white;margin-top:20px">
+        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;font-size:20px;text-align:center">相对稳定国家介绍</div>
         <div class="country"><a href="#wdzg">中国</a></div>
         <div class="tubiao">中国2015-2019事件总数变化</div>
         <div class="country"><a href="#wdrb">日本</a></div>
-        <div class="tubiao">日本2015-2019事件总数</div>
+        <div class="tubiao">日本2015-2019事件总数变化</div>
         <div class="country"><a href="#wdxxl">新西兰</a></div>
         <div class="tubiao">新西兰2015-2019事件总数变化</div>
+		<div class="country" style="margin-bottom: 10px"><a href="#zj1">分析与总结</a></div>
 
-        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
-            font-size:20px;text-align:center">政治热点区域国家介绍</div>
+        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;font-size:20px;text-align:center">政治热点区域国家介绍</div>
         <div class="country"><a href="#rdym">也门</a></div>
         <div class="tubiao">2015年也门各类型事件数</div>
-        <div class="country"><a href="#rdaejly">阿尔及利亚</a></div>
-        <div class="tubiao">阿尔及利亚2015-2019互补累计概率分布变化</div>
         <div class="country"><a href="#rdml">马里</a></div>
         <div class="tubiao">2019年马里各类型事件数</div>
         <div class="country"><a href="#rdsml">索马里</a></div>
-        <div class="tubiao">2017年马里各类型事件数</div>
-
-        <div style="width:350px;height:40px;background-color:lightsteelblue;line-height:40px;font-family:黑体;
-            font-size:20px;text-align:center">总结</div>
-        <div class="country"><a href="#zj">分析与总结</a></div>
+        <div class="tubiao">2017年索马里各类型事件数</div>
+        <div class="country"><a href="#rdaejly">阿尔及利亚</a></div>
+        <div class="tubiao">阿尔及利亚2015-2019互补累计概率分布变化</div>
+		<div class="country"><a href="#zj2">分析与总结</a></div>
     </div>
     <!--文本栏-->
     <div style="margin-left:380px;width:830px;">
         <div class="contain" style="height:240px;">
             <div id="wdzg" style="width:420px;height:200px;float:left;margin:30px 30px">
                 中华人民共和国（People's Republic of China），简称“中国”，成立于1949年10月1日，位于亚洲东部，太平洋西岸，是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家。陆地面积约960万平方千米，水域面积约470多万平方千米。截至2019年，中国大陆人口数量14.0005亿人，是一个以汉族为主体、56个民族共同组成的统一的多民族国家。
+				<br /><br />
+				
             </div>
             <div id="cnxian" style="width: 300px;height:250px;float:right;margin-right:30px"></div>
             <script type="text/javascript">
@@ -155,13 +153,13 @@
             <div id="jpxian" style="width: 300px;height:250px;float:right;margin-right:30px"></div>
             <script type="text/javascript">
                 var myChart = echarts.init(document.getElementById('jpxian'));
-                myChart.setOption(option = {
+				myChart.setOption(option = {
                     xAxis: {
                         type: 'category',
                         data: ['2015', '2016', '2017', '2018', '2019']
                     },
                     yAxis: {
-                        type: 'value'
+                        type: 'value',
                     },
                     tooltip: {
                         trigger: 'axis'
@@ -170,7 +168,7 @@
                         left: 70   //左边距，解决y轴显示不全
                     },
                     title: {
-                        text: '日本2015-2019事件总数',
+                        text: '日本2015-2019事件总数变化',
                         textStyle: {
                             "fontSize": 12, "color": "#5E5E5E"
                         },
@@ -179,7 +177,7 @@
                     },
                     series: [{
                         data: [22207368, 23436974, 20475118, 19067663, 15200703],
-                        type: 'bar'
+                        type: 'line'
                     }]
                 });
             </script>
@@ -219,6 +217,15 @@
                     }]
                 });
             </script>
+        </div>
+		<div id="zj1" style="width:830px;height:210px;margin:20px 0;border:2px solid gray;border-radius:5px;background-color:white">
+            <div style="width:100px;height:40px;margin:20px 0 10px 20px;font-size:30px;">总结</div>
+            <div style="width:780px;margin:0 30px;">
+                从中国、日本、新西兰这三个政治较为稳定国家2015年至2019年事件数量变化折线图可以看出：
+				<br />①事件数量多的国家，其政治热度不一定高；
+				<br />②人口多或面积大的国家，其事件数量不一定多；
+				<br />③每个国家每年的事件数量都会有一定程度的波动，且上述几个国家的波动情况都较为相似，可能与国际形势发生变化有关。
+            </div>
         </div>
 
         <div class="contain" style="height:320px;">
@@ -284,50 +291,16 @@
                 });
             </script>
         </div>
-        <div class="contain" style="height:290px;">
-            <div id="rdaejly" style="width:420px;height:200px;float:left;margin:30px 30px">
-                阿尔及利亚民主人民共和国（People's Democratic Republic of Algeria ），简称“阿尔及利亚”，是非洲北部马格里布的一个国家。阿尔及利亚国土面积2,381,741平方公里，居非洲各国、地中海各国和阿拉伯国家之冠，排全球第10位。阿尔及利亚经济规模在非洲居第四位，仅次于南非、尼日利亚和埃及。截至2017年人口数量为4220万。
-                <br />
-                <br />
-                2019年，前总统兼国防部长阿卜杜勒－阿齐兹·布特弗利卡因民众反对第五任期而卸任。阿卜杜勒-马吉德·特本当选总统并在首都阿尔及尔万国宫会议中心宣誓就职。
-            </div>
-            <div id="aejlyxian" style="width: 300px;height:250px;float:right;margin:30px 30px 0 0"></div>
-            <script type="text/javascript">
-                var myChart = echarts.init(document.getElementById('aejlyxian'));
-                myChart.setOption(option = {
-                    xAxis: {
-                        type: 'category',
-                        data: ['2015', '2016', '2017', '2018', '2019']
-                    },
-                    yAxis: {
-                        type: 'value',
-                    },
-                    tooltip: {
-                        trigger: 'axis'
-                    },
-                    title: {
-                        text: '阿尔及利亚2015-2019互补累计概率分布变化',
-                        textStyle: {
-                            "fontSize": 12, "color": "#5E5E5E"
-                        },
-                        left: 'center',
-                        top: 20
-                    },
-                    series: [{
-                        data: [0.15444015444015444, 0.10810810810810811, 0.11538461538461539, 0.10894941634241245, 0.6293436293436293],
-                        type: 'line'
-                    }]
-                });
-            </script>
-        </div>
-        <div class="contain" style="height:320px;">
-            <div id="rdml" style="width:420px;height:200px;float:left;margin:30px 30px">
+        <div class="contain" style="height:400px;">
+            <div id="rdml" style="width:420px;height:360px;float:left;margin:30px 30px">
                 马里共和国（République du Mali），简称“马里”，是西非的一个内陆国家，国土面积124万平方公里，是西非面积第二大的国家。据联合国《2010年人类发展报告》统计，马里在全球169个国家综合发展排名中列160位，是世界最不发达国家之一。农牧渔业占GDP的1/3，占就业人口的80%，是马里经济发展的主要潜力，此外，马里的工业基本空白。
                 <br />
                 <br />
-                2012年3月，马里发生军人骚乱，起因是不满抚恤政策，总统政权被终结。
+                2012年3月，马里发生军人骚乱，起因是不满抚恤政策，总统政权被终结。2015年，马里政府曾与北部诸武装组织签署和平协议，但部分组织未能加入该协议，这是造成目前北部和中部地区持续动荡的主要原因。
+				<br />
+				此外，国内的富拉尼族(Fulani)牧民与以农业为主的多贡族(Dogon)成员间常因土地纠纷爆发冲突，且近年来有愈演愈烈趋势。2019年3月，一富拉尼族村庄遇袭，造成130多人遇难。2019年6月9日，马里莫普提一处多贡人村庄遭“屠村”，袭击者纵火焚烧村庄，并向逃散的村民开枪。
             </div>
-            <div id="mlbing" style="width: 300px;height:300px;float:right;margin-right:30px"></div>
+            <div id="mlbing" style="width: 300px;height:300px;float:right;margin:30px 30px 0 0"></div>
             <script type="text/javascript">
                 var myChart = echarts.init(document.getElementById('mlbing'));
                 myChart.setOption(option = {
@@ -384,11 +357,11 @@
             </script>
         </div>
         <div class="contain" style="height:320px;">
-            <div id="rdsml" style="width:420px;height:200px;float:left;margin:30px 30px">
+            <div id="rdsml" style="width:420px;height:250px;float:left;margin:30px 30px">
                 索马里联邦共和国（The Federal Republic of Somalia），简称“索马里”，位于非洲大陆最东部的索马里半岛，拥有非洲最长的海岸线，总面积637660平方公里。截至2018年，人口数量为1518万。索马里是世界最不发达国家之一，由于内战连绵不断，社会、教育体系已崩溃多年，因为是各国货轮出入苏伊士运河的必经海路，所以当地人自20世纪以来即以海盗为业。该国海盗每年勒索各国商船，金额难以估计。
                 <br />
                 <br />
-                2017年2月8日，穆罕默德·阿卜杜拉希·穆罕默德当选索马里总统，2月22日宣誓就职。
+                2017年10月14日，索马里首都摩加迪沙市区一家酒店附近发生爆炸袭击事件。2017年4月10日在索马里首都摩加迪沙一个军营遭遇自杀式炸弹袭击事件。
             </div>
             <div id="smlbing" style="width: 300px;height:300px;float:right;margin-right:30px"></div>
             <script type="text/javascript">
@@ -446,14 +419,51 @@
                 });
             </script>
         </div>
-        <div id="zj" style="width:830px;height:270px;margin:20px 0;border:2px solid gray;border-radius:5px;
+		<div class="contain" style="height:290px;">
+            <div id="rdaejly" style="width:420px;height:220px;float:left;margin:30px 30px">
+                阿尔及利亚民主人民共和国（People's Democratic Republic of Algeria ），简称“阿尔及利亚”，是非洲北部马格里布的一个国家。阿尔及利亚国土面积2,381,741平方公里，居非洲各国、地中海各国和阿拉伯国家之冠，排全球第10位。阿尔及利亚经济规模在非洲居第四位，仅次于南非、尼日利亚和埃及。截至2017年人口数量为4220万。
+                <br />
+                <br />
+                2019年，前总统兼国防部长阿卜杜勒－阿齐兹·布特弗利卡因民众反对第五任期而卸任。阿卜杜勒-马吉德·特本当选总统并在首都阿尔及尔万国宫会议中心宣誓就职。
+            </div>
+            <div id="aejlyxian" style="width: 300px;height:250px;float:right;margin:30px 30px 0 0"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('aejlyxian'));
+                myChart.setOption(option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['2015', '2016', '2017', '2018', '2019']
+                    },
+                    yAxis: {
+                        type: 'value',
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    title: {
+                        text: '阿尔及利亚2015-2019互补累计概率分布变化',
+                        textStyle: {
+                            "fontSize": 12, "color": "#5E5E5E"
+                        },
+                        left: 'center',
+                        top: 20
+                    },
+                    series: [{
+                        data: [0.15444015444015444, 0.10810810810810811, 0.11538461538461539, 0.10894941634241245, 0.6293436293436293],
+                        type: 'line'
+                    }]
+                });
+            </script>
+        </div>
+        <div id="zj2" style="width:830px;height:330px;margin:20px 0;border:2px solid gray;border-radius:5px;
             background-color:white">
             <div style="width:100px;height:40px;margin:20px 0 10px 20px;font-size:30px;">总结</div>
-            <div style="width:790px;margin:0 20px;">
-                从中国、日本、新西兰这三个政治较为稳定国家2015年至2019年事件数量变化折线图可以看出，事件数量多的国家，政治热度不一定高，且三个国家政治事件数量波动也较为相似。
-                <br />也门是2015年的政治热点区域之一，该年3月，也门首都萨那被胡塞武装分子占领，将亚丁设为临时首都。而从2015年发生的政治事件中也可以看出磋商、战争、发表公开声明占了大多数。
-                <br />阿尔及利亚在2015-2018年政治状况都较为稳定，但在2019年它的政治热度却突然上升，成为了政治热点区域之一，而该年，阿尔及利亚曾三次连任的前总统因民众反对而卸任，新总统宣誓就职。
-                <br />从处于政治热点区域的国家来看，以上例举的几个国家的各个政治事件类型所占的比例都较为相似，且大都是最不发达国家。
+            <div style="width:780px;margin:0 30px;">
+				①&nbsp也门作为2015年的政治热点区域之一，该年3月，也门首都萨那被胡塞武装分子占领，并将亚丁设为了临时首都。而从2015年发生的政治事件中也可以看出磋商、战争、发表公开声明占了大多数。
+				<br />②马里作为2019年的政治热点区域之一，该国当年由于民族间的矛盾发生了屠村事件。从2019年的政治事件中可以看出马里的磋商、战争、发表公开声明事件占了大多数。
+				<br />③索马里作为2017年的政治热点区域之一，首都在2017年则发生了爆炸袭击事件与自杀式炸弹袭击事件。当年该国的磋商、战争、发表公开声明事件也占了大多数。
+                <br />从历年来均处于政治热点区域的以上三个国家来看，这几个国家的各个政治事件类型所占的比例都较为相似，且大都是最不发达国家。
+                <br /><br />阿尔及利亚在2015-2018年政治状况都较为稳定，但在2019年它的政治热度却突然上升，成为了政治热点区域之一，而该年，阿尔及利亚曾三次连任的前总统因民众反对而卸任，新总统宣誓就职。
             </div>
         </div>
     </div>
